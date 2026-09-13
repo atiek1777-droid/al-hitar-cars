@@ -1,19 +1,19 @@
 const CACHE_VERSION = 'ahc-v1';
 const CORE_ASSETS = [
-  '/index.html',
-  '/fleet.html',
-  '/travel.html',
-  '/contact.html',
-  '/offline.html',
-  '/css/style.css',
-  '/js/main.js',
-  '/manifest.webmanifest',
-  '/assets/fonts/heading.ttf',
-  '/assets/fonts/body.ttf',
-  '/assets/images/logo-original.png',
-  '/assets/video/hero-poster.jpg',
-  '/assets/icons/icon-192.png',
-  '/assets/icons/icon-512.png'
+  'index.html',
+  'fleet.html',
+  'travel.html',
+  'contact.html',
+  'offline.html',
+  'css/style.css',
+  'js/main.js',
+  'manifest.webmanifest',
+  'assets/fonts/heading.ttf',
+  'assets/fonts/body.ttf',
+  'assets/images/logo-original.png',
+  'assets/video/hero-poster.jpg',
+  'assets/icons/icon-192.png',
+  'assets/icons/icon-512.png'
 ];
 
 self.addEventListener('install', function (event) {
@@ -44,7 +44,7 @@ self.addEventListener('fetch', function (event) {
         caches.open(CACHE_VERSION).then(function (cache) { cache.put(req, resClone); });
         return res;
       }).catch(function () {
-        return caches.match(req).then(function (cached) { return cached || caches.match('/offline.html'); });
+        return caches.match(req).then(function (cached) { return cached || caches.match('offline.html'); });
       })
     );
     return;

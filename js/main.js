@@ -1,12 +1,11 @@
-// AL-HITAR CARS — site behavior
+// AL-HITAR CARS — site behavior (single file, no duplicates)
 (function () {
   "use strict";
 
   /* ---------- Intro reveal ---------- */
   var intro = document.querySelector('.intro-reveal');
   if (intro) {
-    var already = sessionStorage.getItem('ahc_intro_seen');
-    if (already) {
+    if (sessionStorage.getItem('ahc_intro_seen')) {
       intro.classList.add('hide');
     } else {
       sessionStorage.setItem('ahc_intro_seen', '1');
@@ -56,13 +55,40 @@
     revealEls.forEach(function (el) { el.classList.add('in-view'); });
   }
 
-  /* ---------- Hero video play/pause toggle ---------- */
-  var vidToggle = document.querySelector('.
-    var mql = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (mql.matches) { heroVideo.pause(); vidToggle.innerHTML = ICON_PLAY; }
-  }
+  /* ---------- Hero: poster-as-background + video fades in on canplay ---------- */
+  var heroEl = document.querySelector('.hero');
+  var heroVideo = document.querySelector('.hero-media video');
+  var vidToggle = document.querySelector('.hero-video-toggle');
   var ICON_PLAY = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>';
   var ICON_PAUSE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>';
+
+  if (heroEl && heroVideo) {
+    var posterUrl = heroVideo.getAttribute('poster');
+    if (posterUrl) heroEl.style.backgroundImage = "url('" + posterUrl + "')";
+
+    var markReady = function () { heroVideo.classList.add('is-ready'); };
+    if (heroVideo.readyState >= 3) {
+      markReady();
+    } else {
+      heroVideo.addEventListener('canplay', markReady, { once: true });
+    }
+    // Safety net: if canplay never fires (slow network), reveal after 2.5s anyway.
+    setTimeout(markReady, 2500);
+
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reducedMotion) {
+      heroVideo.pause();
+      if (vidToggle) vidToggle.innerHTML = ICON_PLAY;
+    }
+
+    if (vidToggle) {
+      vidToggle.innerHTML = reducedMotion ? ICON_PLAY : ICON_PAUSE;
+      vidToggle.addEventListener('click', function () {
+        if (heroVideo.paused) { heroVideo.play(); vidToggle.innerHTML = ICON_PAUSE; }
+        else { heroVideo.pause(); vidToggle.innerHTML = ICON_PLAY; }
+      });
+    }
+  }
 
   /* ---------- Fleet filters ---------- */
   var filterBar = document.querySelector('.filter-bar');
@@ -140,8 +166,7 @@
       if (em) em.textContent = msg;
     }
     function clearError(field) {
-      var wrap = field.closest('.field');
-      wrap.classList.remove('error');
+      field.closest('.field').classList.remove('error');
     }
 
     form.addEventListener('submit', function (e) {
@@ -189,7 +214,7 @@
         '',
         'اسم العميل: ' + data.name,
         'رقم الهاتف: ' + data.phone,
-        'نوع الخدمة: ' + data.service,
+        'نوع الخدمة: ' + data.service
       ];
       if (data.vehicle) lines.push('السيارة المطلوبة: ' + data.vehicle);
       if (data.pickup) lines.push('مكان الاستلام: ' + data.pickup);
@@ -221,7 +246,7 @@
   /* ---------- PWA: service worker + install prompt ---------- */
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', function () {
-      navigator.serviceWorker.register('/service-worker.js').catch(function () {});
+      navigator.serviceWorker.register('service-worker.js').catch(function () {});
     });
   }
 
