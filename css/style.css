@@ -459,3 +459,6 @@ html[dir="rtl"] .ticker-track { animation-name: tickerScrollRTL; }
   .info-grid { grid-template-columns: 1fr; }
   .install-banner { inset-inline: 12px; bottom: 12px; }
 }
+@media (prefers-reduced-motion: reduce){.hero-media video{display:block!important}}
+.hero-video-toggle{display:none!important}
+#hero-video,.hero-media video{pointer-events:none}

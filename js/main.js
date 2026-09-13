@@ -57,14 +57,7 @@
   }
 
   /* ---------- Hero video play/pause toggle ---------- */
-  var vidToggle = document.querySelector('.hero-video-toggle');
-  var heroVideo = document.querySelector('.hero-media video');
-  if (vidToggle && heroVideo) {
-    vidToggle.addEventListener('click', function () {
-      if (heroVideo.paused) { heroVideo.play(); vidToggle.setAttribute('data-state', 'playing'); }
-      else { heroVideo.pause(); vidToggle.setAttribute('data-state', 'paused'); }
-      vidToggle.innerHTML = heroVideo.paused ? ICON_PLAY : ICON_PAUSE;
-    });
+  var vidToggle = document.querySelector('.
     var mql = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (mql.matches) { heroVideo.pause(); vidToggle.innerHTML = ICON_PLAY; }
   }
