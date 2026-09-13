@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://alhitarcars.example.com/sitemap.xml

@@ -1,0 +1,722 @@
+{
+  "cars": [
+    {
+      "file": "image_01.jpeg",
+      "out_jpg": "assets/images/cars/car_01.jpg",
+      "out_webp": "assets/images/cars/car_01.webp",
+      "w": 1400,
+      "h": 1052,
+      "category": "suv",
+      "id": "car_01"
+    },
+    {
+      "file": "image_02.jpeg",
+      "out_jpg": "assets/images/cars/car_02.jpg",
+      "out_webp": "assets/images/cars/car_02.webp",
+      "w": 1400,
+      "h": 786,
+      "category": "suv",
+      "id": "car_02"
+    },
+    {
+      "file": "image_03.jpeg",
+      "out_jpg": "assets/images/cars/car_03.jpg",
+      "out_webp": "assets/images/cars/car_03.webp",
+      "w": 1400,
+      "h": 1050,
+      "category": "pickup",
+      "id": "car_03"
+    },
+    {
+      "file": "image_04.jpg",
+      "out_jpg": "assets/images/cars/car_04.jpg",
+      "out_webp": "assets/images/cars/car_04.webp",
+      "w": 1080,
+      "h": 1455,
+      "category": "suv",
+      "id": "car_04"
+    },
+    {
+      "file": "image_05.jpg",
+      "out_jpg": "assets/images/cars/car_05.jpg",
+      "out_webp": "assets/images/cars/car_05.webp",
+      "w": 1400,
+      "h": 789,
+      "category": "pickup",
+      "id": "car_05"
+    },
+    {
+      "file": "image_06.jpg",
+      "out_jpg": "assets/images/cars/car_06.jpg",
+      "out_webp": "assets/images/cars/car_06.webp",
+      "w": 1400,
+      "h": 819,
+      "category": "suv",
+      "id": "car_06"
+    },
+    {
+      "file": "image_07.webp",
+      "out_jpg": "assets/images/cars/car_07.jpg",
+      "out_webp": "assets/images/cars/car_07.webp",
+      "w": 1400,
+      "h": 933,
+      "category": "suv",
+      "id": "car_07"
+    },
+    {
+      "file": "image_08.jpg",
+      "out_jpg": "assets/images/cars/car_08.jpg",
+      "out_webp": "assets/images/cars/car_08.webp",
+      "w": 1400,
+      "h": 933,
+      "category": "suv",
+      "id": "car_08"
+    },
+    {
+      "file": "image_09.jpg",
+      "out_jpg": "assets/images/cars/car_09.jpg",
+      "out_webp": "assets/images/cars/car_09.webp",
+      "w": 1400,
+      "h": 819,
+      "category": "sedan",
+      "id": "car_09"
+    },
+    {
+      "file": "image_10.webp",
+      "out_jpg": "assets/images/cars/car_10.jpg",
+      "out_webp": "assets/images/cars/car_10.webp",
+      "w": 1400,
+      "h": 933,
+      "category": "suv",
+      "id": "car_10"
+    },
+    {
+      "file": "image_11.webp",
+      "out_jpg": "assets/images/cars/car_11.jpg",
+      "out_webp": "assets/images/cars/car_11.webp",
+      "w": 1800,
+      "h": 900,
+      "category": "suv",
+      "id": "car_11"
+    },
+    {
+      "file": "image_12.jpg",
+      "out_jpg": "assets/images/cars/car_12.jpg",
+      "out_webp": "assets/images/cars/car_12.webp",
+      "w": 1400,
+      "h": 771,
+      "category": "suv",
+      "id": "car_12"
+    },
+    {
+      "file": "image_13.jpg",
+      "out_jpg": "assets/images/cars/car_13.jpg",
+      "out_webp": "assets/images/cars/car_13.webp",
+      "w": 1430,
+      "h": 804,
+      "category": "interior",
+      "id": "car_13"
+    },
+    {
+      "file": "image_14.webp",
+      "out_jpg": "assets/images/cars/car_14.jpg",
+      "out_webp": "assets/images/cars/car_14.webp",
+      "w": 1081,
+      "h": 491,
+      "category": "interior",
+      "id": "car_14"
+    },
+    {
+      "file": "image_15.webp",
+      "out_jpg": "assets/images/cars/car_15.jpg",
+      "out_webp": "assets/images/cars/car_15.webp",
+      "w": 1081,
+      "h": 491,
+      "category": "interior",
+      "id": "car_15"
+    },
+    {
+      "file": "image_16.webp",
+      "out_jpg": "assets/images/cars/car_16.jpg",
+      "out_webp": "assets/images/cars/car_16.webp",
+      "w": 1101,
+      "h": 500,
+      "category": "interior",
+      "id": "car_16"
+    },
+    {
+      "file": "image_17.webp",
+      "out_jpg": "assets/images/cars/car_17.jpg",
+      "out_webp": "assets/images/cars/car_17.webp",
+      "w": 1081,
+      "h": 491,
+      "category": "interior",
+      "id": "car_17"
+    },
+    {
+      "file": "image_18.jpg",
+      "out_jpg": "assets/images/cars/car_18.jpg",
+      "out_webp": "assets/images/cars/car_18.webp",
+      "w": 1198,
+      "h": 904,
+      "category": "suv",
+      "id": "car_18"
+    },
+    {
+      "file": "image_19.jpg",
+      "out_jpg": "assets/images/cars/car_19.jpg",
+      "out_webp": "assets/images/cars/car_19.webp",
+      "w": 1400,
+      "h": 1050,
+      "category": "suv",
+      "id": "car_19"
+    },
+    {
+      "file": "image_20.jpg",
+      "out_jpg": "assets/images/cars/car_20.jpg",
+      "out_webp": "assets/images/cars/car_20.webp",
+      "w": 1400,
+      "h": 819,
+      "category": "suv",
+      "id": "car_20"
+    },
+    {
+      "file": "image_21.png",
+      "out_jpg": "assets/images/cars/car_21.jpg",
+      "out_webp": "assets/images/cars/car_21.webp",
+      "w": 1400,
+      "h": 966,
+      "category": "sedan",
+      "id": "car_21"
+    },
+    {
+      "file": "image_22.png",
+      "out_jpg": "assets/images/cars/car_22.jpg",
+      "out_webp": "assets/images/cars/car_22.webp",
+      "w": 1400,
+      "h": 933,
+      "category": "sedan",
+      "id": "car_22"
+    },
+    {
+      "file": "image_23.jpg",
+      "out_jpg": "assets/images/cars/car_23.jpg",
+      "out_webp": "assets/images/cars/car_23.webp",
+      "w": 1400,
+      "h": 972,
+      "category": "suv",
+      "id": "car_23"
+    },
+    {
+      "file": "image_24.jpg",
+      "out_jpg": "assets/images/cars/car_24.jpg",
+      "out_webp": "assets/images/cars/car_24.webp",
+      "w": 1400,
+      "h": 972,
+      "category": "suv",
+      "id": "car_24"
+    },
+    {
+      "file": "image_25.jpg",
+      "out_jpg": "assets/images/cars/car_25.jpg",
+      "out_webp": "assets/images/cars/car_25.webp",
+      "w": 1400,
+      "h": 973,
+      "category": "suv",
+      "id": "car_25"
+    },
+    {
+      "file": "image_26.jpg",
+      "out_jpg": "assets/images/cars/car_26.jpg",
+      "out_webp": "assets/images/cars/car_26.webp",
+      "w": 1400,
+      "h": 612,
+      "category": "suv",
+      "id": "car_26"
+    },
+    {
+      "file": "image_27.jpg",
+      "out_jpg": "assets/images/cars/car_27.jpg",
+      "out_webp": "assets/images/cars/car_27.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "pickup",
+      "id": "car_27"
+    },
+    {
+      "file": "image_28.jpg",
+      "out_jpg": "assets/images/cars/car_28.jpg",
+      "out_webp": "assets/images/cars/car_28.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_28"
+    },
+    {
+      "file": "image_29.jpg",
+      "out_jpg": "assets/images/cars/car_29.jpg",
+      "out_webp": "assets/images/cars/car_29.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "sedan",
+      "id": "car_29"
+    },
+    {
+      "file": "image_30.jpg",
+      "out_jpg": "assets/images/cars/car_30.jpg",
+      "out_webp": "assets/images/cars/car_30.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "pickup",
+      "id": "car_30"
+    },
+    {
+      "file": "image_31.jpg",
+      "out_jpg": "assets/images/cars/car_31.jpg",
+      "out_webp": "assets/images/cars/car_31.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "sports",
+      "id": "car_31"
+    },
+    {
+      "file": "image_32.jpg",
+      "out_jpg": "assets/images/cars/car_32.jpg",
+      "out_webp": "assets/images/cars/car_32.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "pickup",
+      "id": "car_32"
+    },
+    {
+      "file": "image_33.jpg",
+      "out_jpg": "assets/images/cars/car_33.jpg",
+      "out_webp": "assets/images/cars/car_33.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_33"
+    },
+    {
+      "file": "image_34.jpg",
+      "out_jpg": "assets/images/cars/car_34.jpg",
+      "out_webp": "assets/images/cars/car_34.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_34"
+    },
+    {
+      "file": "image_35.jpg",
+      "out_jpg": "assets/images/cars/car_35.jpg",
+      "out_webp": "assets/images/cars/car_35.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_35"
+    },
+    {
+      "file": "image_36.jpg",
+      "out_jpg": "assets/images/cars/car_36.jpg",
+      "out_webp": "assets/images/cars/car_36.webp",
+      "w": 1400,
+      "h": 630,
+      "category": "suv",
+      "id": "car_36"
+    },
+    {
+      "file": "image_37.jpg",
+      "out_jpg": "assets/images/cars/car_37.jpg",
+      "out_webp": "assets/images/cars/car_37.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "sedan",
+      "id": "car_37"
+    },
+    {
+      "file": "image_38.jpg",
+      "out_jpg": "assets/images/cars/car_38.jpg",
+      "out_webp": "assets/images/cars/car_38.webp",
+      "w": 1400,
+      "h": 665,
+      "category": "sedan",
+      "id": "car_38"
+    },
+    {
+      "file": "image_39.jpg",
+      "out_jpg": "assets/images/cars/car_39.jpg",
+      "out_webp": "assets/images/cars/car_39.webp",
+      "w": 1400,
+      "h": 1008,
+      "category": "suv",
+      "id": "car_39"
+    },
+    {
+      "file": "image_40.jpg",
+      "out_jpg": "assets/images/cars/car_40.jpg",
+      "out_webp": "assets/images/cars/car_40.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_40"
+    },
+    {
+      "file": "image_41.jpg",
+      "out_jpg": "assets/images/cars/car_41.jpg",
+      "out_webp": "assets/images/cars/car_41.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_41"
+    },
+    {
+      "file": "image_42.jpg",
+      "out_jpg": "assets/images/cars/car_42.jpg",
+      "out_webp": "assets/images/cars/car_42.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_42"
+    },
+    {
+      "file": "image_43.jpg",
+      "out_jpg": "assets/images/cars/car_43.jpg",
+      "out_webp": "assets/images/cars/car_43.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "sports",
+      "id": "car_43"
+    },
+    {
+      "file": "image_44.jpg",
+      "out_jpg": "assets/images/cars/car_44.jpg",
+      "out_webp": "assets/images/cars/car_44.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_44"
+    },
+    {
+      "file": "image_45.jpg",
+      "out_jpg": "assets/images/cars/car_45.jpg",
+      "out_webp": "assets/images/cars/car_45.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_45"
+    },
+    {
+      "file": "image_46.jpg",
+      "out_jpg": "assets/images/cars/car_46.jpg",
+      "out_webp": "assets/images/cars/car_46.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_46"
+    },
+    {
+      "file": "image_47.jpg",
+      "out_jpg": "assets/images/cars/car_47.jpg",
+      "out_webp": "assets/images/cars/car_47.webp",
+      "w": 1400,
+      "h": 1003,
+      "category": "suv",
+      "id": "car_47"
+    },
+    {
+      "file": "image_48.jpg",
+      "out_jpg": "assets/images/cars/car_48.jpg",
+      "out_webp": "assets/images/cars/car_48.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_48"
+    },
+    {
+      "file": "image_49.jpg",
+      "out_jpg": "assets/images/cars/car_49.jpg",
+      "out_webp": "assets/images/cars/car_49.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_49"
+    },
+    {
+      "file": "image_50.jpg",
+      "out_jpg": "assets/images/cars/car_50.jpg",
+      "out_webp": "assets/images/cars/car_50.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_50"
+    },
+    {
+      "file": "image_51.jpg",
+      "out_jpg": "assets/images/cars/car_51.jpg",
+      "out_webp": "assets/images/cars/car_51.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "pickup",
+      "id": "car_51"
+    },
+    {
+      "file": "image_52.png",
+      "out_jpg": "assets/images/cars/car_52.jpg",
+      "out_webp": "assets/images/cars/car_52.webp",
+      "w": 1400,
+      "h": 931,
+      "category": "suv",
+      "id": "car_52"
+    },
+    {
+      "file": "image_53.jpg",
+      "out_jpg": "assets/images/cars/car_53.jpg",
+      "out_webp": "assets/images/cars/car_53.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_53"
+    },
+    {
+      "file": "image_54.jpg",
+      "out_jpg": "assets/images/cars/car_54.jpg",
+      "out_webp": "assets/images/cars/car_54.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_54"
+    },
+    {
+      "file": "image_55.jpg",
+      "out_jpg": "assets/images/cars/car_55.jpg",
+      "out_webp": "assets/images/cars/car_55.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "sports",
+      "id": "car_55"
+    },
+    {
+      "file": "image_56.jpg",
+      "out_jpg": "assets/images/cars/car_56.jpg",
+      "out_webp": "assets/images/cars/car_56.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_56"
+    },
+    {
+      "file": "image_57.jpg",
+      "out_jpg": "assets/images/cars/car_57.jpg",
+      "out_webp": "assets/images/cars/car_57.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "sports",
+      "id": "car_57"
+    },
+    {
+      "file": "image_58.jpg",
+      "out_jpg": "assets/images/cars/car_58.jpg",
+      "out_webp": "assets/images/cars/car_58.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_58"
+    },
+    {
+      "file": "image_59.jpg",
+      "out_jpg": "assets/images/cars/car_59.jpg",
+      "out_webp": "assets/images/cars/car_59.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_59"
+    },
+    {
+      "file": "image_65.webp",
+      "out_jpg": "assets/images/cars/car_60.jpg",
+      "out_webp": "assets/images/cars/car_60.webp",
+      "w": 1280,
+      "h": 720,
+      "category": "pickup",
+      "id": "car_60"
+    },
+    {
+      "file": "image_67.jpg",
+      "out_jpg": "assets/images/cars/car_61.jpg",
+      "out_webp": "assets/images/cars/car_61.webp",
+      "w": 1400,
+      "h": 933,
+      "category": "suv",
+      "id": "car_61"
+    },
+    {
+      "file": "image_68.jpg",
+      "out_jpg": "assets/images/cars/car_62.jpg",
+      "out_webp": "assets/images/cars/car_62.webp",
+      "w": 1400,
+      "h": 973,
+      "category": "suv",
+      "id": "car_62"
+    },
+    {
+      "file": "image_69.jpg",
+      "out_jpg": "assets/images/cars/car_63.jpg",
+      "out_webp": "assets/images/cars/car_63.webp",
+      "w": 1400,
+      "h": 987,
+      "category": "suv",
+      "id": "car_63"
+    },
+    {
+      "file": "image_70.jpg",
+      "out_jpg": "assets/images/cars/car_64.jpg",
+      "out_webp": "assets/images/cars/car_64.webp",
+      "w": 1400,
+      "h": 1004,
+      "category": "suv",
+      "id": "car_64"
+    },
+    {
+      "file": "image_71.jpg",
+      "out_jpg": "assets/images/cars/car_65.jpg",
+      "out_webp": "assets/images/cars/car_65.webp",
+      "w": 1400,
+      "h": 819,
+      "category": "suv",
+      "id": "car_65"
+    }
+  ],
+  "action": [
+    {
+      "file": "image_66.jpg",
+      "out_jpg": "assets/images/action/action_01.jpg",
+      "out_webp": "assets/images/action/action_01.webp",
+      "w": 648,
+      "h": 796,
+      "id": "action_01"
+    },
+    {
+      "file": "image_72.jpg",
+      "out_jpg": "assets/images/action/action_02.jpg",
+      "out_webp": "assets/images/action/action_02.webp",
+      "w": 648,
+      "h": 796,
+      "id": "action_02"
+    },
+    {
+      "file": "image_73.jpg",
+      "out_jpg": "assets/images/action/action_03.jpg",
+      "out_webp": "assets/images/action/action_03.webp",
+      "w": 648,
+      "h": 796,
+      "id": "action_03"
+    },
+    {
+      "file": "image_74.jpg",
+      "out_jpg": "assets/images/action/action_04.jpg",
+      "out_webp": "assets/images/action/action_04.webp",
+      "w": 648,
+      "h": 796,
+      "id": "action_04"
+    },
+    {
+      "file": "image_75.jpg",
+      "out_jpg": "assets/images/action/action_05.jpg",
+      "out_webp": "assets/images/action/action_05.webp",
+      "w": 648,
+      "h": 796,
+      "id": "action_05"
+    },
+    {
+      "file": "image_76.jpg",
+      "out_jpg": "assets/images/action/action_06.jpg",
+      "out_webp": "assets/images/action/action_06.webp",
+      "w": 648,
+      "h": 796,
+      "id": "action_06"
+    },
+    {
+      "file": "image_77.jpg",
+      "out_jpg": "assets/images/action/action_07.jpg",
+      "out_webp": "assets/images/action/action_07.webp",
+      "w": 648,
+      "h": 796,
+      "id": "action_07"
+    },
+    {
+      "file": "image_78.jpg",
+      "out_jpg": "assets/images/action/action_08.jpg",
+      "out_webp": "assets/images/action/action_08.webp",
+      "w": 648,
+      "h": 796,
+      "id": "action_08"
+    },
+    {
+      "file": "image_79.jpg",
+      "out_jpg": "assets/images/action/action_09.jpg",
+      "out_webp": "assets/images/action/action_09.webp",
+      "w": 648,
+      "h": 796,
+      "id": "action_09"
+    },
+    {
+      "file": "image_80.jpg",
+      "out_jpg": "assets/images/action/action_10.jpg",
+      "out_webp": "assets/images/action/action_10.webp",
+      "w": 648,
+      "h": 796,
+      "id": "action_10"
+    },
+    {
+      "file": "image_81.jpg",
+      "out_jpg": "assets/images/action/action_11.jpg",
+      "out_webp": "assets/images/action/action_11.webp",
+      "w": 648,
+      "h": 796,
+      "id": "action_11"
+    },
+    {
+      "file": "image_82.jpg",
+      "out_jpg": "assets/images/action/action_12.jpg",
+      "out_webp": "assets/images/action/action_12.webp",
+      "w": 648,
+      "h": 796,
+      "id": "action_12"
+    },
+    {
+      "file": "image_83.jpg",
+      "out_jpg": "assets/images/action/action_13.jpg",
+      "out_webp": "assets/images/action/action_13.webp",
+      "w": 648,
+      "h": 796,
+      "id": "action_13"
+    }
+  ],
+  "logos": [
+    {
+      "file": "image_60.png",
+      "brand": "ford",
+      "out": "assets/images/logos/ford.png"
+    },
+    {
+      "file": "image_61.png",
+      "brand": "bmw",
+      "out": "assets/images/logos/bmw.png"
+    },
+    {
+      "file": "image_62.png",
+      "brand": "lexus",
+      "out": "assets/images/logos/lexus.png"
+    },
+    {
+      "file": "image_63.png",
+      "brand": "mercedes",
+      "out": "assets/images/logos/mercedes.png"
+    },
+    {
+      "file": "image_64.png",
+      "brand": "toyota",
+      "out": "assets/images/logos/toyota.png"
+    }
+  ]
+}
