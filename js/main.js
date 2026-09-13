@@ -55,42 +55,39 @@
     revealEls.forEach(function (el) { el.classList.add('in-view'); });
   }
 
-  /* ---------- Hero: poster-as-background + video fades in on canplay ---------- */
-  var heroEl = document.querySelector('.hero');
-  var heroVideo = document.querySelector('.hero-media video');
-  var vidToggle = document.querySelector('.hero-video-toggle');
-  var ICON_PLAY = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>';
-  var ICON_PAUSE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>';
+  /* ---------- Hero video ---------- */
+var heroEl = document.querySelector('.hero');
+var heroVideo = document.querySelector('.hero-media video');
+var vidToggle = document.querySelector('.hero-video-toggle');
+var ICON_PLAY = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>';
+var ICON_PAUSE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>';
 
-  if (heroEl && heroVideo) {
-    var posterUrl = heroVideo.getAttribute('poster');
-    if (posterUrl) heroEl.style.backgroundImage = "url('" + posterUrl + "')";
-
-    var markReady = function () { heroVideo.classList.add('is-ready'); };
-    if (heroVideo.readyState >= 3) {
-      markReady();
-    } else {
-      heroVideo.addEventListener('canplay', markReady, { once: true });
-    }
-    // Safety net: if canplay never fires (slow network), reveal after 2.5s anyway.
-    setTimeout(markReady, 2500);
-
-    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (reducedMotion) {
-      heroVideo.pause();
-      if (vidToggle) vidToggle.innerHTML = ICON_PLAY;
-    }
-
-    if (vidToggle) {
-      vidToggle.innerHTML = reducedMotion ? ICON_PLAY : ICON_PAUSE;
-      vidToggle.addEventListener('click', function () {
-        if (heroVideo.paused) { heroVideo.play(); vidToggle.innerHTML = ICON_PAUSE; }
-        else { heroVideo.pause(); vidToggle.innerHTML = ICON_PLAY; }
-      });
+if (heroEl && heroVideo) {
+  var posterUrl = heroVideo.getAttribute('poster');
+  if (posterUrl) { heroEl.style.backgroundImage = "url('" + posterUrl + "')"; }
+  function markReady() { heroVideo.classList.add('is-ready'); }
+  function tryPlay() {
+    var result = heroVideo.play();
+    if (result && typeof result.catch === 'function') {
+      result.catch(function () { heroVideo.classList.add('is-ready'); });
     }
   }
+  heroVideo.addEventListener('canplay', function () { markReady(); tryPlay(); });
+  heroVideo.addEventListener('loadeddata', function () { markReady(); tryPlay(); });
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) tryPlay(); });
+  if (heroVideo.readyState >= 2) { markReady(); tryPlay(); }
+  setTimeout(function () { markReady(); tryPlay(); }, 2500);
+  if (vidToggle) {
+    vidToggle.innerHTML = ICON_PAUSE;
+    vidToggle.addEventListener('click', function () {
+      if (heroVideo.paused) { tryPlay(); vidToggle.innerHTML = ICON_PAUSE; }
+      else { heroVideo.pause(); vidToggle.innerHTML = ICON_PLAY; }
+    });
+  }
+}
 
-  /* ---------- Fleet filters ---------- */
+/* ---------- Fleet filters ---------- */
+
   var filterBar = document.querySelector('.filter-bar');
   if (filterBar) {
     var buttons = filterBar.querySelectorAll('.filter-btn');
