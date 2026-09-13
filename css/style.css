@@ -3,13 +3,13 @@
    ========================================================================== */
 
 @font-face {
-  font-family: 'Heading Arabic';
+  font-family: 'BoutrosART';
   src: url('../assets/fonts/heading.ttf') format('truetype');
   font-weight: 400 700;
   font-display: swap;
 }
 @font-face {
-  font-family: 'Body Arabic';
+  font-family: 'Tajawal';
   src: url('../assets/fonts/body.ttf') format('truetype');
   font-weight: 300 700;
   font-display: swap;
@@ -39,8 +39,8 @@
   --text-primary: #14171a;
   --text-secondary: #565f5c;
 
-  --font-head: 'Heading Arabic', 'BoutrosART', Arial, sans-serif;
-  --font-body: 'Body Arabic', 'Tajawal', Arial, sans-serif;
+  --font-head: 'BoutrosART', Arial, sans-serif;
+  --font-body: 'Tajawal', Arial, sans-serif;
 
   --container: 1240px;
   --radius: 6px;
@@ -543,4 +543,12 @@ button, .btn, .filter-btn, .nav-toggle, .hero-video-toggle, .lightbox-close { mi
   .feature-grid .tile, .feature-grid .tile.wide, .feature-grid .tile.tall { grid-column: 1; aspect-ratio: 4 / 3; }
   .vehicle-card .body .row { flex-wrap: wrap; }
   .vehicle-card .body .row .btn { min-width: 0; }
+}
+
+
+/* ---- All feature-grid tiles landscape ---- */
+.feature-grid .tile,
+.feature-grid .tile.wide,
+.feature-grid .tile.tall {
+  aspect-ratio: 4 / 3;
 }

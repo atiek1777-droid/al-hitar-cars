@@ -63,6 +63,12 @@ var ICON_PLAY = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stro
 var ICON_PAUSE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>';
 
 if (heroEl && heroVideo) {
+  heroVideo.muted = true;
+  heroVideo.defaultMuted = true;
+  heroVideo.setAttribute('muted', '');
+  heroVideo.setAttribute('autoplay', '');
+  heroVideo.setAttribute('playsinline', '');
+  heroVideo.setAttribute('webkit-playsinline', '');
   var posterUrl = heroVideo.getAttribute('poster');
   if (posterUrl) { heroEl.style.backgroundImage = "url('" + posterUrl + "')"; }
   function markReady() { heroVideo.classList.add('is-ready'); }
