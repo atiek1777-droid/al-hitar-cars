@@ -462,7 +462,47 @@ html[dir="rtl"] .ticker-track { animation-name: tickerScrollRTL; }
 @media (prefers-reduced-motion: reduce){.hero-media video{display:block!important}}
 .hero-video-toggle{display:none!important}
 #hero-video,.hero-media video{pointer-events:none}
-/* HERO-V2 — poster always visible under video */
-.hero-media{position:relative;background:#0A1F1D url("/assets/video/hero-poster.jpg") center/cover no-repeat!important;overflow:hidden}
-.hero-media video{display:block;width:100%;height:100%;object-fit:cover;background:transparent!important}
-@media(max-width:768px){.hero-media{aspect-ratio:9/16!important;min-height:70vh}}
+
+/* =========================================================
+   HERO VIDEO — FINAL OVERRIDE
+   ========================================================= */
+
+.hero { position: relative; isolation: isolate; min-height: 100svh; overflow: hidden; background: #0a1f1d; }
+
+.hero-media {
+  position: absolute !important; inset: 0 !important; z-index: 1 !important;
+  width: 100% !important; height: 100% !important; min-height: 0 !important;
+  overflow: hidden !important; background-color: #0a1f1d !important;
+  background-image: url("/assets/video/hero-poster.jpg") !important;
+  background-position: center !important; background-size: cover !important;
+  background-repeat: no-repeat !important; aspect-ratio: auto !important;
+}
+
+.hero-media::after {
+  content: ""; position: absolute; inset: 0; z-index: 2;
+  pointer-events: none; background: rgba(0,0,0,0.34);
+}
+
+.hero-media video {
+  position: absolute !important; inset: 0 !important; z-index: 1 !important;
+  display: block !important; width: 100% !important; height: 100% !important;
+  max-width: none !important; min-width: 0 !important; min-height: 0 !important;
+  object-fit: cover !important; object-position: center center !important;
+  background: transparent !important; opacity: 0 !important; visibility: visible !important;
+  transition: opacity 0.25s ease-in !important;
+}
+
+.hero-media video.is-ready { opacity: 1 !important; }
+
+.hero-content { position: relative !important; z-index: 3 !important; }
+
+.hero > .container, .hero > .hero-content, .hero .hero-actions,
+.hero h1, .hero h2, .hero p, .hero a, .hero button { position: relative; z-index: 3; }
+
+@media (max-width: 768px) {
+  .hero { min-height: 60vh; min-height: 60svh; }
+  .hero-media { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; min-height: 0 !important; aspect-ratio: auto !important; }
+  .hero-media video { width: 100% !important; height: 100% !important; object-fit: cover !important; }
+}
+
+@media (max-height: 650px) and (max-width: 768px) { .hero { min-height: 560px; } }
