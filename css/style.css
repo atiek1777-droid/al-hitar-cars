@@ -552,3 +552,21 @@ button, .btn, .filter-btn, .nav-toggle, .hero-video-toggle, .lightbox-close { mi
 .feature-grid .tile.tall {
   aspect-ratio: 4 / 3;
 }
+
+/* ============================================================
+   HERO + HEADER FINAL OVERRIDE — v4
+   ============================================================ */
+
+.hero { position: relative; min-height: 90svh; overflow: hidden; isolation: isolate; }
+.hero-media { position: absolute; inset: 0; z-index: 1; overflow: hidden; background: #080909; }
+.hero-media video { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center center; }
+.hero-media::after { content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: rgba(0,0,0,0.55); }
+.hero-content { position: relative; z-index: 3; min-height: 90svh; display: flex; flex-direction: column; justify-content: center; padding: 112px 20px 56px; background: linear-gradient(180deg, rgba(0,0,0,0.18) 0%, rgba(0,0,0,0.08) 45%, rgba(0,0,0,0.34) 100%); }
+.hero h1, .hero h1 *, .hero p, .hero .lead, .hero-en { text-shadow: 0 2px 12px rgba(0,0,0,0.85), 0 1px 3px rgba(0,0,0,0.95); }
+.hero h1 { line-height: 1.25; }
+.hero-en { display: block; margin-top: 16px; line-height: 1.5; }
+.hero-actions { margin-top: 24px; }
+.site-header, .site-header.scrolled { position: fixed; inset-block-start: 0; inset-inline: 0; z-index: 100; padding: 14px 0 !important; background: rgba(13,15,15,0.94) !important; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transition: background-color 0.8s ease, box-shadow 0.8s ease, backdrop-filter 0.8s ease; }
+.site-header::before, .site-header.scrolled::before { content: none !important; display: none !important; }
+@media (min-width: 768px) { .hero { min-height: 90svh; } .hero-media::after { background: rgba(0,0,0,0.4); } .hero-content { min-height: 90svh; padding: 140px 32px 80px; } }
+@media (max-width: 767px) { .hero-media video { object-position: center center; } }
