@@ -275,3 +275,19 @@ if (heroEl && heroVideo) {
     });
   }
 })();
+
+/* ---- SW update patch v3 ---- */
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker.register("/service-worker.js", { scope: "/", updateViaCache: "none" })
+      .then(function (r) { return r.update(); })
+      .catch(function (e) { console.error("SW reg:", e); });
+  });
+  var _swRefreshing = false;
+  navigator.serviceWorker.addEventListener("controllerchange", function () {
+    if (_swRefreshing) return;
+    _swRefreshing = true;
+    window.location.reload();
+  });
+}
+/* ---- end SW update patch ---- */
