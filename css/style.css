@@ -625,3 +625,14 @@ button, .btn, .filter-btn, .nav-toggle, .hero-video-toggle, .lightbox-close { mi
     padding: 32vh 32px 140px !important;
   }
 }
+
+/* ===== v7: hero content touches bottom, just above ticker ===== */
+.hero-content {
+  justify-content: flex-end !important;
+  padding: 40px 20px 20px !important;
+}
+@media (min-width: 768px) {
+  .hero-content {
+    padding: 40px 32px 30px !important;
+  }
+}
