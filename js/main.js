@@ -58,10 +58,6 @@
   /* ---------- Hero video ---------- */
 var heroEl = document.querySelector('.hero');
 var heroVideo = document.querySelector('.hero-media video');
-var vidToggle = document.querySelector('.hero-video-toggle');
-var ICON_PLAY = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>';
-var ICON_PAUSE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>';
-
 if (heroEl && heroVideo) {
   heroVideo.muted = true;
   heroVideo.defaultMuted = true;
@@ -83,14 +79,7 @@ if (heroEl && heroVideo) {
   document.addEventListener('visibilitychange', function () { if (!document.hidden) tryPlay(); });
   if (heroVideo.readyState >= 2) { markReady(); tryPlay(); }
   setTimeout(function () { markReady(); tryPlay(); }, 2500);
-  if (vidToggle) {
-    vidToggle.innerHTML = ICON_PAUSE;
-    vidToggle.addEventListener('click', function () {
-      if (heroVideo.paused) { tryPlay(); vidToggle.innerHTML = ICON_PAUSE; }
-      else { heroVideo.pause(); vidToggle.innerHTML = ICON_PLAY; }
-    });
   }
-}
 
 /* ---------- Fleet filters ---------- */
 
@@ -275,19 +264,3 @@ if (heroEl && heroVideo) {
     });
   }
 })();
-
-/* ---- SW update patch v3 ---- */
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function () {
-    navigator.serviceWorker.register("/service-worker.js", { scope: "/", updateViaCache: "none" })
-      .then(function (r) { return r.update(); })
-      .catch(function (e) { console.error("SW reg:", e); });
-  });
-  var _swRefreshing = false;
-  navigator.serviceWorker.addEventListener("controllerchange", function () {
-    if (_swRefreshing) return;
-    _swRefreshing = true;
-    window.location.reload();
-  });
-}
-/* ---- end SW update patch ---- */
