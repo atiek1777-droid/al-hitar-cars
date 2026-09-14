@@ -614,3 +614,14 @@ button, .btn, .filter-btn, .nav-toggle, .hero-video-toggle, .lightbox-close { mi
 .hero-video-toggle{display:none !important}
 .hero-actions{margin-top:48px !important}
 @media (min-width:768px){.hero-actions{margin-top:56px !important}}
+
+/* ===== v6: push hero content lower (near bottom) ===== */
+.hero-content {
+  justify-content: flex-end !important;
+  padding: 30vh 20px 100px !important;
+}
+@media (min-width: 768px) {
+  .hero-content {
+    padding: 32vh 32px 140px !important;
+  }
+}
