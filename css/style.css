@@ -608,3 +608,9 @@ button, .btn, .filter-btn, .nav-toggle, .hero-video-toggle, .lightbox-close { mi
     z-index: 999 !important;
   }
 }
+
+
+/* ===== HIDE video toggle + push actions down ===== */
+.hero-video-toggle{display:none !important}
+.hero-actions{margin-top:48px !important}
+@media (min-width:768px){.hero-actions{margin-top:56px !important}}
